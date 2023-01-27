@@ -30,13 +30,18 @@ cd code
 python manage.py createsuperuser
 ```
 
-Created a script start.sh to take care of scripts executed:
-> python manage.py migrate --noinput
-> gunicorn --bind :8000 --workers 2 pypro.wsgi
-Instead of runing them via Dockerfile
-
 Whitenoise setup for static files
 Collect static files before deploy
 ```console
 python manage.py collectstatic --noinput
+```
+
+## Docker Local
+```console
+docker build -t appname .
+```
+
+Run container and destroy after with --rm closing interactively with -it
+```console
+docker run --rm -it -p 8000:8000 -e SECRET_KEY=secret -e ALLOWED_HOSTS=localhost, appname pythone manage.py migrate
 ```
