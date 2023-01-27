@@ -43,5 +43,5 @@ docker build -t appname .
 
 Run container and destroy after with --rm closing interactively with -it
 ```console
-docker run --rm -it -p 8000:8000 -e SECRET_KEY=secret -e ALLOWED_HOSTS=localhost, appname pythone manage.py migrate
+docker run --rm -it -p 8000:8000 -e SECRET_KEY=secret -e ALLOWED_HOSTS=localhost, appname python manage.py migrate
 ```
