@@ -29,3 +29,14 @@ fly ssh console
 cd code
 python manage.py createsuperuser
 ```
+
+Created a script start.sh to take care of scripts executed:
+> python manage.py migrate --noinput
+> gunicorn --bind :8000 --workers 2 pypro.wsgi
+Instead of runing them via Dockerfile
+
+Whitenoise setup for static files
+Collect static files before deploy
+```console
+python manage.py collectstatic --noinput
+```
