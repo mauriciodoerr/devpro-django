@@ -5,7 +5,7 @@ on:
       workflows: ["Django CI"]
       branches: [ "develop" ]
       types:
-        - completed
+        - success
 
 jobs:
   deploy:
