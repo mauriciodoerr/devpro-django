@@ -1,4 +1,4 @@
-ARG PYTHON_VERSION=3.10-slim-buster
+ARG PYTHON_VERSION=3.11.1-slim-buster
 
 FROM python:${PYTHON_VERSION}
 
@@ -9,11 +9,14 @@ RUN mkdir -p /code
 
 WORKDIR /code
 
-COPY requirements.txt /tmp/requirements.txt
+# COPY requirements.txt /tmp/requirements.txt
+COPY Pipfile .
+COPY Pipfile.lock .
 
 RUN set -ex && \
     pip install --upgrade pip && \
-    pip install -r /tmp/requirements.txt && \
+    pip install pipenv && \
+    pipenv install -d --system && \
     rm -rf /root/.cache/
 
 COPY . /code/
