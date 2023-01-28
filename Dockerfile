@@ -5,9 +5,9 @@ FROM python:${PYTHON_VERSION}
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-RUN mkdir -p /code
+RUN mkdir -p /app
 
-WORKDIR /code
+WORKDIR /app
 
 # COPY requirements.txt /tmp/requirements.txt
 COPY Pipfile .
@@ -19,7 +19,7 @@ RUN set -ex && \
     pipenv install -d --system && \
     rm -rf /root/.cache/
 
-COPY . /code/
+COPY . /app/
 
 # RUN python manage.py collectstatic --noinput
 
