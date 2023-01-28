@@ -43,9 +43,16 @@ docker build -t appname .
 
 Run container and destroy after with --rm closing interactively with -it
 ```console
-docker run --rm -it -p 8000:8000 -e SECRET_KEY=secret -e ALLOWED_HOSTS=localhost appname
+docker run --rm -it -p 8000:8000 --env-file=.env appname
 ```
 OR
 ```console
 docker run --rm -it -p 8000:8000 -e SECRET_KEY=secret -e ALLOWED_HOSTS=localhost, appname python manage.py migrate
+```
+
+To run as daemon process
+```console
+docker run --rm -it -p 8000:8000 --env-file=.env -d appname
+docker ps
+docker exec -it container_id bash
 ```
