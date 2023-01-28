@@ -5,10 +5,10 @@ on:
       workflows: ["Django CI"]
       branches: [ "develop" ]
       types:
-        - success
+        - completed
 
 jobs:
-  deploy:
+  on-success:
     name: Deploy to Fly.io
     runs-on: ubuntu-latest
     env:
