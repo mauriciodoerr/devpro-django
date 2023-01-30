@@ -53,11 +53,12 @@ jobs:
 
   upload-CodeCov:
     runs-on: ubuntu-latest
+    uses: actions/checkout@v3
     needs:
       - build
-    uses: codecov/codecov-action@v3
     steps:
     - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
       files: ./coverage.xml
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
