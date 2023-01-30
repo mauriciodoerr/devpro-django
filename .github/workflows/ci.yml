@@ -49,12 +49,12 @@ jobs:
     - name: Run Tests
       run: |
         pipenv run flake8
-        pipenv run pytest --cov pypro
 
     - name: Upload coverage reports to Codecov
       run: |
         # Replace `linux` below with the appropriate OS
         # Options are `alpine`, `linux`, `macos`, `windows`
+        pipenv run pytest --cov pypro
         curl -Os https://uploader.codecov.io/latest/linux/codecov
         chmod +x codecov
         ./codecov -t ${{ secrets.CODECOV_TOKEN }}
