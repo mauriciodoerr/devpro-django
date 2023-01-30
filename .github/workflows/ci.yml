@@ -59,4 +59,4 @@ jobs:
         chmod +x codecov
         ./codecov -t ${{ secrets.CODECOV_TOKEN }}
       with:
-        files: .coverage.xml
+        files: coverage.xml
