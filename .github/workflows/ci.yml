@@ -49,11 +49,10 @@ jobs:
     - name: Run Tests
       run: |
         pipenv run flake8
+        pipenv run pytest --cov pypro
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
-      run: |
-        pipenv run pytest --cov=pypro
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         fail_ci_if_error: true
