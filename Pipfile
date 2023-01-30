@@ -9,6 +9,7 @@ gunicorn = "*"
 python-decouple = "*"
 dj-database-url = "*"
 psycopg2-binary = "*"
+pytest-django = "*"
 
 [dev-packages]
 flake8 = "*"
