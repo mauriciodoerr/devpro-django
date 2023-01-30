@@ -56,7 +56,7 @@ jobs:
       uses: codecov/codecov-action@v3
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-        directory: ./coverage/reports/
+        files: /home/runner/work/devpro-django/coverage.xml
         fail_ci_if_error: true
         verbose: true
         env_vars: OS,PYTHON
