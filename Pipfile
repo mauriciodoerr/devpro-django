@@ -16,7 +16,6 @@ flake8 = "*"
 pytest = "*"
 pytest-cov = "*"
 codecov = "*"
-coverage = "*"
 
 [requires]
 python_version = "3.11"
