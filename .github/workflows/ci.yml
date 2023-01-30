@@ -57,4 +57,4 @@ jobs:
         pipenv run pytest --cov pypro
         curl -Os https://uploader.codecov.io/latest/linux/codecov
         chmod +x codecov
-        ./codecov -f coverage.xml -t ${{ secrets.CODECOV_TOKEN }}
+        ./codecov -f ./coverage.xml -t ${{ secrets.CODECOV_TOKEN }}
