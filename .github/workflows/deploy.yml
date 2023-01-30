@@ -1,11 +1,11 @@
 name: Deploy
 
 on:
-    workflow_run:
-      workflows: ["Django CI"]
-      branches: [ "develop" ]
-      types:
-        - completed
+  workflow_run:
+    workflows: ["Django CI"]
+    branches: [ "develop" ]
+    types:
+      - completed
 
 jobs:
   on-success:

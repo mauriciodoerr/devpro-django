@@ -46,7 +46,10 @@ jobs:
       run: |
         cp .env.example .env
 
-    - name: Run Flake8
+    - name: Run Tests
       run: |
         pipenv run flake8
-        pipenv run pytest
+        pipenv run pytest --cov=pypro
+
+  on-success:
+    - codecov
