@@ -51,5 +51,10 @@ jobs:
         pipenv run flake8
         pipenv run pytest --cov=pypro
 
-    on-success:
-      - codecov
+  upload-codecov:
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    steps:
+      - name: CodeCov
+        run: pipenv run codecov
