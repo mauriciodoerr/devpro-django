@@ -51,11 +51,6 @@ jobs:
         pipenv run flake8
         pipenv run pytest --cov=pypro
 
-  upload-CodeCov:
-    runs-on: ubuntu-latest
-    needs:
-      - build
-    steps:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       files: ./coverage.xml
