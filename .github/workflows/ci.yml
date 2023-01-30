@@ -50,10 +50,13 @@ jobs:
       run: |
         pipenv run flake8
         pipenv run pytest --cov pypro
+        pipenv run codecov
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
+        directory: ./coverage/reports/
         fail_ci_if_error: true
         verbose: true
+        env_vars: OS,PYTHON
