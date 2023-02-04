@@ -1,6 +1,6 @@
-# fly.toml file generated for nameless-smoke-6524 on 2023-02-04T11:15:54-03:00
+# fly.toml file generated for pypro on 2023-02-04T12:00:55-03:00
 
-app = "nameless-smoke-6524"
+app = "pypro"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
