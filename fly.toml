@@ -1,6 +1,6 @@
 # fly.toml file generated for nameless-sun-6444 on 2023-01-27T11:57:15-03:00
 
-app = "nameless-sun-6444"
+app = "pypro"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
