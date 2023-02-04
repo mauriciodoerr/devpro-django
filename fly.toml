@@ -1,9 +1,12 @@
-# fly.toml file generated for nameless-sun-6444 on 2023-01-27T11:57:15-03:00
+# fly.toml file generated for nameless-smoke-6524 on 2023-02-04T11:15:54-03:00
 
-app = "pypro"
+app = "nameless-smoke-6524"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
+
+[deploy]
+  release_command = "python manage.py migrate --noinput"
 
 [env]
   PORT = "8000"
@@ -40,6 +43,3 @@ processes = []
 [[statics]]
   guest_path = "/app/public"
   url_prefix = "/static/"
-
-[deploy]
-  release_command = "python manage.py migrate --noinput"
