@@ -182,12 +182,8 @@
             "version": "==3.7"
         },
         "setuptools": {
-            "hashes": [
-                "sha256:883131c5b6efa70b9101c7ef30b2b7b780a4283d5fc1616383cdf22c83cbefe6",
-                "sha256:9d790961ba6219e9ff7d9557622d2fe136816a264dd01d5997cfc057d804853d"
-            ],
-            "markers": "python_version >= '3.7'",
-            "version": "==67.0.0"
+            "hashes": [],
+            "version": "==67.1.0"
         },
         "sqlparse": {
             "hashes": [
