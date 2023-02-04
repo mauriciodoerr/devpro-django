@@ -41,12 +41,8 @@
             "version": "==1.2.0"
         },
         "django": {
-            "hashes": [
-                "sha256:4b214a05fe4c99476e99e2445c8b978c8369c18d4dea8e22ec412862715ad763",
-                "sha256:ff56ebd7ead0fd5dbe06fe157b0024a7aaea2e0593bb3785fb594cf94dad58ef"
-            ],
-            "index": "pypi",
-            "version": "==4.1.5"
+            "hashes": [],
+            "version": "==4.1.6"
         },
         "gunicorn": {
             "hashes": [
