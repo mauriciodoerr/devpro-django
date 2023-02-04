@@ -12,7 +12,14 @@ env:
 
 install:
   - pip install pipenv
-  - pipenv sync -d
+  - pipenv --python 3.9.6
+  - pipenv install --dev
+  - pipenv install exceptiongroup
+  - cp contrib/env-sample .env
 
 script:
   - pipenv run flake8 .
+  - pipenv run pytest --cov=pypro
+
+after_success:
+  - pipenv run codecov

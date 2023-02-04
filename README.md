@@ -16,7 +16,7 @@ In order to build and deploy to Fly.io setup following files:
 > fly.toml
 > Dockerfile
 > .env
-> .env.example
+> .env-sample
 
 Deploy to Fly.io
 ```console

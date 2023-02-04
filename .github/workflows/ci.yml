@@ -44,7 +44,7 @@ jobs:
 
     - name: Setup Env
       run: |
-        cp .env.example .env
+        cp contrib/env-sample .env
 
     - name: Run Tests
       run: |
