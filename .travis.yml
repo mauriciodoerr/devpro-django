@@ -13,7 +13,7 @@ env:
 install:
   - pip install pipenv
   - pipenv --python 3.9.6
-  - pipenv sync -d
+  - pipenv install --dev
   - cp contrib/env-sample .env
 
 script:
