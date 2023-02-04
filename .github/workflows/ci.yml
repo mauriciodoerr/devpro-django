@@ -46,7 +46,13 @@ jobs:
       run: |
         cp .env.example .env
 
-    - name: Run Flake8
+    - name: Run Tests
       run: |
         pipenv run flake8
-        pipenv run pytest
+
+    - name: Upload coverage reports to Codecov
+      run: |
+        pipenv run pytest --cov pypro
+        curl -Os https://uploader.codecov.io/latest/linux/codecov
+        chmod +x codecov
+        ./codecov -f ./coverage.xml -t ${{ secrets.CODECOV_TOKEN }}
