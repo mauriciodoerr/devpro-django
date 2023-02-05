@@ -24,7 +24,7 @@ install:
   - cp contrib/env-sample .env
 
 before_script:
-  - pgsql -c "CREATE DATABASE testdb;" -U postgres
+  - psql -c "CREATE DATABASE testdb;" -U postgres
 
 script:
   - pipenv run flake8 .
