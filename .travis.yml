@@ -5,6 +5,12 @@ sudo: true
 python:
   - 3.9.6
 
+services:
+  - postgresql
+
+addons:
+  postgresql: '14.6'
+
 env:
   global:
     - PIPENV_VENV_IN_PROJECT=1
@@ -16,6 +22,9 @@ install:
   - pipenv install --dev
   - pipenv install exceptiongroup
   - cp contrib/env-sample .env
+
+before_script:
+  - pgsql -c "CREATE DATABASE testdb;" -U postgres
 
 script:
   - pipenv run flake8 .
