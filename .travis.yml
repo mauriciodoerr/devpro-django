@@ -9,7 +9,7 @@ services:
   - postgresql
 
 addons:
-  postgresql: '14.6'
+  postgresql: '9.5'
 
 env:
   global:
