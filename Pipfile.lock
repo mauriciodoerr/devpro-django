@@ -33,12 +33,8 @@
             "version": "==22.2.0"
         },
         "dj-database-url": {
-            "hashes": [
-                "sha256:5c2993b91801c0f78a8b19e642b497b90831124cbade0c265900d4c1037b4730",
-                "sha256:b23b15046cb38180e0c95207bcc90fe5e9dbde8eef16065907dd85cf4ca7036c"
-            ],
-            "index": "pypi",
-            "version": "==1.2.0"
+            "hashes": [],
+            "version": "==2.0.0"
         },
         "django": {
             "hashes": [
