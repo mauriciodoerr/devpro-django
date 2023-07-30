@@ -431,12 +431,8 @@
             "version": "==2.10.0"
         },
         "pyflakes": {
-            "hashes": [
-                "sha256:ec55bf7fe21fff7f1ad2f7da62363d749e2a470500eab1b555334b67aa1ef8cf",
-                "sha256:ec8b276a6b60bd80defed25add7e439881c19e64850afd9b346283d4165fd0fd"
-            ],
-            "markers": "python_version >= '3.6'",
-            "version": "==3.0.1"
+            "hashes": [],
+            "version": "==3.1.0"
         },
         "pytest": {
             "hashes": [
